@@ -1,4 +1,4 @@
-A VSCode extension that link with DG-Lab (Coyote) devices to provide haptic feedback based on AI code quality scores.
+A VSCode extension that link with DG-Lab (郊狼) devices to provide haptic feedback based on AI code quality scores.
 
 一个VSCode扩展，连接郊狼主机（DG-Lab），根据AI代码质量评分自动触发电击反馈。
 
