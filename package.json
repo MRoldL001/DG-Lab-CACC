@@ -1,0 +1,102 @@
+{
+  "name": "dg-lab-cacc",
+  "displayName": "DG-Lab CACC",
+  "description": "AI Code Checker + DG-Lab Integration: Auto-stimulate based on code quality score",
+  "version": "1.0.0",
+  "publisher": "MRoldL001",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MRoldL001/DG-Lab-CACC.git"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "DG-Lab CACC",
+      "properties": {
+        "dgLabCacc.wsServer": {
+          "type": "string",
+          "default": "",
+          "description": "WebSocket服务器地址（如 wss://example.com:9999）"
+        },
+        "dgLabCacc.threshold": {
+          "type": "number",
+          "default": 60,
+          "description": "触发刺激的分数阈值（分数<阈值时触发）"
+        },
+        "dgLabCacc.maxStrength": {
+          "type": "number",
+          "default": 100,
+          "description": "最大刺激强度（0-200）"
+        },
+        "dgLabCacc.stimDuration": {
+          "type": "number",
+          "default": 5,
+          "description": "刺激持续时间（秒）"
+        },
+        "dgLabCacc.channel": {
+          "type": "string",
+          "enum": [
+            "A",
+            "B"
+          ],
+          "default": "A",
+          "description": "刺激通道"
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "dgLabCaccSidebar",
+          "title": "DG-Lab"
+        }
+      ]
+    },
+    "views": {
+      "dgLabCaccSidebar": [
+        {
+          "id": "dgLabCaccMainView",
+          "name": "DG-Lab Control"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "dgLabCacc.openSidebar",
+        "title": "DG-Lab: 打开控制面板"
+      },
+      {
+        "command": "dgLabCacc.emergencyStop",
+        "title": "DG-Lab: 紧急停止"
+      },
+      {
+        "command": "dgLabCacc.disconnect",
+        "title": "DG-Lab: 断开设备"
+      },
+      {
+        "command": "dgLabCacc.toggleConnection",
+        "title": "DG-Lab: 连接/断开设备"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {}
+}
