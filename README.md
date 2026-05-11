@@ -2,8 +2,6 @@ A VSCode extension that link with DG-Lab (Coyote) devices to provide haptic feed
 
 一个VSCode扩展，连接郊狼主机（DG-Lab），根据AI代码质量评分自动触发电击反馈。
 
----
-
 通过 [SOCKET 控制协议 V2](https://github.com/DG-LAB-OPENSOURCE/DG-LAB-OPENSOURCE/blob/main/socket/v2/README.md) 基于 [Chobits AI Code Checker](https://marketplace.visualstudio.com/items?itemName=MRoldL001.chobits-ai-code-checker) 扩展控制郊狼主机
 
 ---
