@@ -4,6 +4,7 @@
   "description": "AI Code Checker + DG-Lab Integration: Auto-stimulate based on code quality score",
   "version": "1.0.0",
   "publisher": "MRoldL001",
+  "icon": "dg-lab-cacc.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/MRoldL001/DG-Lab-CACC.git"
@@ -53,38 +54,26 @@
         }
       }
     },
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "dgLabCaccSidebar",
-          "title": "DG-Lab"
-        }
-      ]
-    },
-    "views": {
-      "dgLabCaccSidebar": [
-        {
-          "id": "dgLabCaccMainView",
-          "name": "DG-Lab Control"
-        }
-      ]
-    },
     "commands": [
       {
-        "command": "dgLabCacc.openSidebar",
-        "title": "DG-Lab: 打开控制面板"
+        "command": "dgLabCacc.openPanel",
+        "title": "DG-Lab: 打开控制面板",
+        "category": "DG-Lab"
       },
       {
         "command": "dgLabCacc.emergencyStop",
-        "title": "DG-Lab: 紧急停止"
+        "title": "DG-Lab: 紧急停止",
+        "category": "DG-Lab"
       },
       {
         "command": "dgLabCacc.disconnect",
-        "title": "DG-Lab: 断开设备"
+        "title": "DG-Lab: 断开设备",
+        "category": "DG-Lab"
       },
       {
         "command": "dgLabCacc.toggleConnection",
-        "title": "DG-Lab: 连接/断开设备"
+        "title": "DG-Lab: 连接/断开设备",
+        "category": "DG-Lab"
       }
     ]
   },

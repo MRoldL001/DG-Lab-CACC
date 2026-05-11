@@ -108,13 +108,17 @@ export class DGLabService {
 
   public disconnect() {
     this.stopHeartbeat();
+    this.isConnected = false;
+    this.clientId = '';
+    this.targetId = '';
+    
     if (this.ws) {
       this.ws.close();
       this.ws = null;
     }
-    this.isConnected = false;
-    this.clientId = '';
-    this.targetId = '';
+    
+    vscode.window.showWarningMessage('已断开！杂鱼杂鱼');
+    
     this.onStatusChange?.({
       isConnected: false,
       clientId: '',
@@ -199,7 +203,7 @@ export class DGLabService {
             this.clientId = msg.clientId;
           } else if (msg.message === '200') {
             this.targetId = msg.targetId;
-            vscode.window.showInformationMessage('DG-Lab设备连接成功！');
+            vscode.window.showInformationMessage('DG-Lab设备连接成功！⚡⚡⚡');
           } else if (msg.message === '400') {
             vscode.window.showWarningMessage('绑定失败：ID已被占用');
           } else if (msg.message === '401') {
@@ -232,13 +236,7 @@ export class DGLabService {
 
         case 'break':
           this.targetId = '';
-          vscode.window.showWarningMessage('DG-Lab设备已断开');
-          this.onStatusChange?.({
-            isConnected: this.isConnected,
-            clientId: this.clientId,
-            targetId: this.targetId,
-            wsServer: this.config.wsServer
-          });
+          this.disconnect();
           break;
 
         case 'heartbeat':
