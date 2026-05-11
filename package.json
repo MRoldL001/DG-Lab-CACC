@@ -30,7 +30,7 @@
         "dgLabCacc.threshold": {
           "type": "number",
           "default": 60,
-          "description": "触发刺激的分数阈值（分数<阈值时触发）"
+          "description": "触发电击分数阈值（分数小于阈值时触发，不包含输入的数字）"
         },
         "dgLabCacc.maxStrength": {
           "type": "number",
