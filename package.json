@@ -2,7 +2,7 @@
   "name": "dg-lab-cacc",
   "displayName": "DG-Lab CACC",
   "description": "AI Code Checker + DG-Lab Integration: Auto-stimulate based on code quality score",
-  "version": "1.0.0",
+  "version": "0.1.0-alpha.1",
   "publisher": "MRoldL001",
   "icon": "dg-lab-cacc.png",
   "repository": {
