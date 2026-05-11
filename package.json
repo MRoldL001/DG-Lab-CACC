@@ -15,6 +15,9 @@
   "categories": [
     "Other"
   ],
+  "extensionDependencies": [
+    "MRoldL001.chobits-ai-code-checker"
+  ],
   "main": "./out/extension.js",
   "activationEvents": [
     "*"
