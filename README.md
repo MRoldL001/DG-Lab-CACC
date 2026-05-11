@@ -32,7 +32,7 @@ A VSCode extension that link with DG-Lab (郊狼) devices to provide haptic feed
 
 1. 点击状态栏的🐺图标打开控制面板
 2. 点击"生成连接码"按钮
-3. 打开郊狼APP → SOCKET功能 → 扫描二维码
+3. 打开 DG-LAB APP → SOCKET控制 → 扫描连接码
 4. 连接成功后面板显示实时参数
 
 ## ⚡ 工作原理
