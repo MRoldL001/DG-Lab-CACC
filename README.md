@@ -2,6 +2,8 @@
   <img src="dg-lab-cacc-title.png" alt="LOGO" width="400">
 </div>
 
+<br/>
+
 A VSCode extension that link with DG-LAB (郊狼) devices to provide haptic feedback based on AI code quality scores.
 
 一个VSCode扩展，连接郊狼主机（DG-LAB），根据AI代码质量评分自动触发电击反馈。
